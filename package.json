@@ -16,7 +16,7 @@
 		"test": "npm run lint",
 		"start": "electron .",
 		"pack": "electron-builder --dir",
-		"dist": "electron-builder --macos --linux --windows",
+		"dist": "electron-builder --windows",
 		"release": "np"
 	},
 	"dependencies": {
@@ -45,31 +45,8 @@
 	},
 	"build": {
 		"appId": "com.company.AppName",
-		"mac": {
-			"category": "public.app-category.social-networking",
-			"darkModeSupport": true
-		},
-		"dmg": {
-			"iconSize": 160,
-			"contents": [
-				{
-					"x": 180,
-					"y": 170
-				},
-				{
-					"x": 480,
-					"y": 170,
-					"type": "link",
-					"path": "/Applications"
-				}
-			]
-		},
-		"linux": {
-			"target": [
-				"AppImage",
-				"deb"
-			],
-			"category": "Network;Chat"
+		"win": {
+			"target": "nsis"
 		}
 	}
 }

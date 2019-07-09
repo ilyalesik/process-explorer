@@ -7,12 +7,18 @@
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<h1>Electron boilerplate</h1>
-				<p></p>
-			</header>
-			<section class="main"></section>
-			<footer></footer>
+			<textarea disabled></textarea>
 		</div>
+		<script>
+		    const { ipcRenderer } = require('electron');
+
+            ipcRenderer.on('request-tasklist-reply', (event, arg) => {
+                document.querySelector('textarea').value = arg;
+            });
+
+            setInterval(() => {
+                ipcRenderer.send('request-tasklist-message')
+            }, 1000);
+        </script>
 	</body>
 </html>

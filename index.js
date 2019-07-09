@@ -8,6 +8,8 @@ const debug = require('electron-debug');
 const contextMenu = require('electron-context-menu');
 const config = require('./config');
 const menu = require('./menu');
+const exec = require('child_process').exec;
+const {ipcMain} = require('electron')
 
 unhandled();
 debug();
@@ -34,8 +36,11 @@ const createMainWindow = async () => {
 	const win = new BrowserWindow({
 		title: app.getName(),
 		show: false,
-		width: 600,
-		height: 400
+		width: 1200,
+		height: 400,
+        webPreferences: {
+            nodeIntegration: true
+        }
 	});
 
 	win.on('ready-to-show', () => {
@@ -85,6 +90,9 @@ app.on('activate', async () => {
 	Menu.setApplicationMenu(menu);
 	mainWindow = await createMainWindow();
 
-	const favoriteAnimal = config.get('favoriteAnimal');
-	mainWindow.webContents.executeJavaScript(`document.querySelector('header p').textContent = 'Your favorite animal is ${favoriteAnimal}'`);
+    ipcMain.on('request-tasklist-message', (event) => {
+        exec('tasklist', function(err, stdout) {
+            event.reply('request-tasklist-reply', stdout)
+        });
+    });
 })();

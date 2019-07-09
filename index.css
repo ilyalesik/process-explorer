@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background: transparent;
+    overflow: hidden;
 }
 
 /* Use OS default fonts */
@@ -23,21 +24,15 @@ body {
 	font-feature-settings: 'liga', 'clig', 'kern';
 }
 
-header {
-	position: absolute;
-	width: 500px;
-	height: 250px;
-	top: 50%;
-	left: 50%;
-	margin-top: -125px;
-	margin-left: -250px;
-	text-align: center;
+body {
+    padding-right: 5px;
 }
 
-header h1 {
-	font-size: 60px;
-	font-weight: 200;
-	margin: 0;
-	padding: 0;
-	opacity: 0.7;
+textarea {
+    width: 100%;
+    margin-right: 3px;
+    height: 100vh;
+    background: white;
+    font-family: inherit;
+    border: none;
 }
