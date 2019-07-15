@@ -6,19 +6,7 @@
 		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<div class="container">
-			<textarea disabled></textarea>
-		</div>
-		<script>
-		    const { ipcRenderer } = require('electron');
-
-            ipcRenderer.on('request-tasklist-reply', (event, arg) => {
-                document.querySelector('textarea').value = arg;
-            });
-
-            setInterval(() => {
-                ipcRenderer.send('request-tasklist-message')
-            }, 1000);
-        </script>
+		<div id="root"></div>
+        <script src="./src/index.js"></script>
 	</body>
 </html>

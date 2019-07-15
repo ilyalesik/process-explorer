@@ -10,6 +10,7 @@ const config = require('./config');
 const menu = require('./menu');
 const exec = require('child_process').exec;
 const {ipcMain} = require('electron')
+const isDev = require("electron-is-dev");
 
 unhandled();
 debug();
@@ -53,7 +54,11 @@ const createMainWindow = async () => {
 		mainWindow = undefined;
 	});
 
-	await win.loadFile(path.join(__dirname, 'index.html'));
+    await win.loadURL(
+        isDev
+            ? "http://localhost:3000"
+            : `file://${path.join(__dirname, "../build/index.html")}`
+    );
 
 	return win;
 };
