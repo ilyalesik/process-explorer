@@ -57,3 +57,7 @@
     color: #9c9c9c;
     text-transform: uppercase;
 }
+
+.processItem__children {
+    padding: 24px 0 24px 44px;
+}
