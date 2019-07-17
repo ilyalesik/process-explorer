@@ -1,5 +1,7 @@
 # process-explorer
 
+![Process Explorer](./process-explorer-demo.gif)
+
 ## Debug
 
 #### Launch React DevTools
