@@ -6,7 +6,7 @@
 }
 
 .processItem__column {
-    width: 100px;
+    width: 80px;
 }
 
 .processItem__column + .processItem__column {
