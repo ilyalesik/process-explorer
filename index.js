@@ -6,9 +6,6 @@ const {is} = require('electron-util');
 const unhandled = require('electron-unhandled');
 const debug = require('electron-debug');
 const contextMenu = require('electron-context-menu');
-const config = require('./config');
-const menu = require('./menu');
-const exec = require('child_process').exec;
 const {ipcMain} = require('electron');
 const isDev = require("electron-is-dev");
 const psList = require('ps-list');
@@ -93,7 +90,6 @@ app.on('activate', async () => {
 
 (async () => {
 	await app.whenReady();
-	Menu.setApplicationMenu(menu);
 	mainWindow = await createMainWindow();
 
     ipcMain.on('request-tasklist-message', async (event) => {
