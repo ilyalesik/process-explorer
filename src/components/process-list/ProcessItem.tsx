@@ -1,14 +1,18 @@
 import React from "react";
 import {ProcessDescriptor} from "ps-list";
 import "./processItem.css"
-import {useStore} from "effector-react";
-import {$childProcesses} from "../../processListStore";
+import {useStoreMap} from "effector-react";
+import { $processList} from "../../processListStore";
 
 const toFixed2 = (num) => Math.round(num * 100) / 100;
 
 export const ProcessItem = (props: ProcessDescriptor & {key: number}) => {
     const {name, cpu, memory, pid} = props;
-    const childItems = useStore($childProcesses(pid));
+    const childItems = useStoreMap({
+        store: $processList,
+        keys: [pid],
+        fn: (processList, [pid]) => processList.filter(value => value.ppid === pid)
+    });
     return <>
         <div className="processItem">
             <div className="processItem__column processItem__name">

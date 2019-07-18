@@ -5,4 +5,4 @@ export const updateListEvent = createEvent<Array<ProcessDescriptor>>("updateList
 
 export const $processList = restore(updateListEvent, []);
 
-export const $childProcesses = (pid: number) => $processList.map(state => state.filter(value => value.ppid === pid));
+export const $rootProcesses = $processList.map(state => state.filter(value => value.ppid === 0));
