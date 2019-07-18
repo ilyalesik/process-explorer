@@ -1,6 +1,8 @@
-# process-explorer
+# [WIP] process-explorer
 
 Hierarchical system processes viewer based on web technologies.
+
+️⚠️ Warning: application is not ready and currently being at alpha version.️
 
 ![Process Explorer](./process-explorer-demo.gif)
 
