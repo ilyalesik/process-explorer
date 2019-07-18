@@ -13,6 +13,9 @@ export const ProcessItem = (props: ProcessDescriptor & {key: number}) => {
         keys: [pid],
         fn: (processList, [pid]) => processList.filter(value => value.ppid === pid)
     });
+    const cpuPercentageFixed2 = React.useMemo(() => cpu && toFixed2(cpu * 100), [cpu]);
+    const memoryPercentageFixed2 = React.useMemo(() => memory && toFixed2(memory * 100), [memory]);
+
     return <>
         <div className="processItem">
             <div className="processItem__column processItem__name">
@@ -25,7 +28,7 @@ export const ProcessItem = (props: ProcessDescriptor & {key: number}) => {
                     cpu
                 </p>
                 <p className={`processItem__text ${(cpu * 100)< 50 ? 'processItem__text--green' : 'processItem__text--red'}`}>
-                    {toFixed2(cpu * 100)}%
+                    {cpuPercentageFixed2}%
                 </p>
             </div>}
             {typeof memory === "number" && <div className="processItem__column">
@@ -33,7 +36,7 @@ export const ProcessItem = (props: ProcessDescriptor & {key: number}) => {
                     memory
                 </p>
                 <p className={`processItem__text ${(memory * 100) < 50 ? 'processItem__text--green' : 'processItem__text--red'}`}>
-                    {toFixed2(memory * 100)}%
+                    {memoryPercentageFixed2}%
                 </p>
             </div>}
         </div>
