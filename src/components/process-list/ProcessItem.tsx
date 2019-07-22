@@ -3,13 +3,16 @@ import "./processItem.css"
 import {useStoreMap} from "effector-react";
 import {$processListMap} from "../../processListStore";
 import {useChildrenProcessItems} from "./useChildrenProcessItems";
+import * as R from "ramda";
+
+const valueLens = (pid, field) => R.view(R.lensPath([pid, field]));
 
 const FieldProvider = (props) => {
     const {children, pid, field} = props;
     const value = useStoreMap({
         store: $processListMap,
         keys: [pid],
-        fn: (processListMap, [pid]) => processListMap[pid] && processListMap[pid][field]
+        fn: (processListMap, [pid]) => valueLens(pid, field)(processListMap)
     });
 
     return <>
