@@ -1,13 +1,11 @@
 import React from "react";
-import {useStore} from "effector-react";
-import {$rootProcesses} from "../../processListStore";
-import {ProcessItem} from "./ProcessItem";
 import "./processList.css"
+import {useChildrenProcessItems} from "./useChildrenProcessItems";
 
 export const ProcessList = () => {
-    const items = useStore($rootProcesses);
+    const childList = useChildrenProcessItems(0);
 
     return <div class="processList">
-        {items.map((item) => <ProcessItem {...item} key={item.pid}  />)}
+        {childList}
     </div>
 };
