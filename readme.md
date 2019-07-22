@@ -11,6 +11,7 @@ Hierarchical system processes viewer based on web technologies.
 * React
 * TypeScript
 * Effector
+* Ramda
 
 ## Debug
 
