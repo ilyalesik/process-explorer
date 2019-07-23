@@ -17,8 +17,9 @@
 		"start": "concurrently \"BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron . \"",
 		"pack": "electron-builder --dir",
 		"dist": "electron-builder --macos",
+    "copy-static": "cp -R static/ build/",
     "clean-build": "rm -rf build/ .cache dist/",
-		"build": "npm run clean-build && npm run react-build && npm run dist",
+		"build": "npm run clean-build && npm run copy-static && npm run react-build && npm run dist",
 		"release": "np",
 		"typescript": "tsc -p tsconfig.json --noEmit",
 		"prettier": "prettier \"*/**/*.+(js|ts|tsx)\" --ignore-path ./.prettierignore --write && git add . && git status"
@@ -67,7 +68,8 @@
 		"appId": "agency.lessmess.ProcessExplorer",
 		"files": [
 			"index.js",
-			"build/**/*"
+			"build/**/*",
+      "static/**/*"
 		],
 		"mac": {
 			"category": "public.app-category.social-networking",
