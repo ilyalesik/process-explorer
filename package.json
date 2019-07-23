@@ -1,7 +1,7 @@
 {
 	"name": "process-explorer",
 	"productName": "Process Explorer",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Process Explorer based on electron",
 	"license": "MIT",
 	"repository": "sindresorhus/electron-boilerplate",
@@ -17,8 +17,8 @@
 		"start": "concurrently \"BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron . \"",
 		"pack": "electron-builder --dir",
 		"dist": "electron-builder --macos",
-    "copy-static": "cp -R static/ build/",
-    "clean-build": "rm -rf build/ .cache dist/",
+		"copy-static": "cp -R static/ build/",
+		"clean-build": "rm -rf build/ .cache dist/",
 		"build": "npm run clean-build && npm run copy-static && npm run react-build && npm run dist",
 		"release": "np",
 		"typescript": "tsc -p tsconfig.json --noEmit",
@@ -69,7 +69,7 @@
 		"files": [
 			"index.js",
 			"build/**/*",
-      "static/**/*"
+			"static/**/*"
 		],
 		"mac": {
 			"category": "public.app-category.social-networking",
