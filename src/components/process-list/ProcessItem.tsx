@@ -29,7 +29,7 @@ export const ProcessItem = (props: { pid: number }) => {
 			<div className="processItem">
 				<div className="processItem__column processItem__name">
 					<FieldProvider pid={pid} field="name">
-						{name => <span className="processItem__text processItem__text--blue">{name}</span>}
+						{name => <span className="processItem__text processItem__text--white">{name}</span>}
 					</FieldProvider>
 				</div>
 				<FieldProvider pid={pid} field="cpu">
@@ -39,7 +39,7 @@ export const ProcessItem = (props: { pid: number }) => {
 								<p class="processItem__label">cpu</p>
 								<p
 									className={`processItem__text ${
-										cpu * 100 < 50 ? "processItem__text--green" : "processItem__text--red"
+										cpu < 50 ? "processItem__text--green" : "processItem__text--red"
 									}`}>
 									{toFixed2(cpu)}%
 								</p>
@@ -54,7 +54,7 @@ export const ProcessItem = (props: { pid: number }) => {
 								<p class="processItem__label">memory</p>
 								<p
 									className={`processItem__text ${
-										memory * 100 < 50 ? "processItem__text--green" : "processItem__text--red"
+										memory < 50 ? "processItem__text--green" : "processItem__text--red"
 									}`}>
 									{toFixed2(memory)}%
 								</p>
