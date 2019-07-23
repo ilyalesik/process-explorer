@@ -1,7 +1,7 @@
 {
 	"name": "process-explorer",
 	"productName": "Process Explorer",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Process Explorer based on electron",
 	"license": "MIT",
 	"repository": "sindresorhus/electron-boilerplate",
