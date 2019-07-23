@@ -13,6 +13,16 @@ Hierarchical system processes viewer based on web technologies.
 * Effector
 * Ramda
 
+## Build
+
+```bash
+npm i
+npm run build
+```
+
+#### Latest builds
+* [Mac](https://github.com/lessmess-dev/process-explorer/releases/download/v0.0.1/Process.Explorer-0.0.1-mac.zip)
+
 ## Debug
 
 #### Launch React DevTools
