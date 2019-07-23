@@ -32,13 +32,8 @@ $ npm install
 $ npm start
 ```
 
-## Debug
-
-#### Launch React DevTools
-
-Then execute the following from the Console tab of your running Electron app's developer tools:
-
-```javascript
-require('electron-react-devtools').install()
-```
-
+## Sponsored
+<a href="https://lessmess.agency/?utm_source=process-explorer">
+  <img src="https://lessmess.agency/badges/sponsored_by_lessmess.svg"
+       alt="Sponsored by Lessmess" width="236" height="54">
+</a>
