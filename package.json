@@ -12,11 +12,13 @@
 	},
 	"scripts": {
 		"react-start": "parcel --no-cache -p 3000 index.html",
-		"react-build": "parcel build index.html",
+		"react-build": "parcel build index.html --out-dir build --public-url ./",
 		"postinstall": "electron-builder install-app-deps",
 		"start": "concurrently \"BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron . \"",
 		"pack": "electron-builder --dir",
 		"dist": "electron-builder --macos",
+    "clean-build": "rm -rf build/ .cache dist/",
+		"build": "npm run clean-build && npm run react-build && npm run dist",
 		"release": "np",
 		"typescript": "tsc -p tsconfig.json --noEmit",
 		"prettier": "prettier \"*/**/*.+(js|ts|tsx)\" --ignore-path ./.prettierignore --write && git add . && git status"
@@ -47,7 +49,7 @@
 		"@babel/preset-react": "^7.0.0",
 		"concurrently": "^4.1.1",
 		"electron": "^5.0.4",
-		"electron-builder": "^20.43.0",
+		"electron-builder": "^20.38.4",
 		"electron-react-devtools": "^0.5.3",
 		"np": "^5.0.3",
 		"parcel-bundler": "^1.12.3",
@@ -56,12 +58,17 @@
 		"typescript": "^3.5.3",
 		"wait-on": "^3.3.0"
 	},
+	"homepage": "./",
 	"np": {
 		"publish": false,
 		"releaseDraft": false
 	},
 	"build": {
 		"appId": "agency.lessmess.ProcessExplorer",
+		"files": [
+			"index.js",
+			"build/**/*"
+		],
 		"mac": {
 			"category": "public.app-category.social-networking",
 			"darkModeSupport": true
