@@ -1,6 +1,8 @@
-# process-explorer
+<p align="center"><img src="static/icon.png" width="64"></p>
 
-Hierarchical system processes viewer based on web technologies.
+# Process Explorer
+
+Hierarchical system processes viewer based on web technologies. 
 
 ![Process Explorer](./process-explorer-demo.gif)
 
