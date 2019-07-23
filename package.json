@@ -20,8 +20,13 @@
 		"pack": "electron-builder --dir",
 		"dist": "electron-builder --macos",
 		"release": "np",
-		"typescript": "tsc -p tsconfig.json --noEmit"
+		"typescript": "tsc -p tsconfig.json --noEmit",
+		"prettier": "prettier \"*/**/*.+(js|ts|tsx)\" --ignore-path ./.prettierignore --write && git add . && git status"
 	},
+  "pre-commit": [
+    "typescript",
+    "prettier"
+  ],
 	"dependencies": {
 		"@types/ramda": "^0.26.18",
 		"effector": "^20.0.0",
@@ -48,6 +53,8 @@
 		"electron-react-devtools": "^0.5.3",
 		"np": "^5.0.3",
 		"parcel-bundler": "^1.12.3",
+		"pre-commit": "^1.2.2",
+		"prettier": "^1.18.2",
 		"typescript": "^3.5.3",
 		"wait-on": "^3.3.0",
 		"xo": "^0.24.0"
