@@ -1,8 +1,6 @@
-# [WIP] process-explorer
+# process-explorer
 
 Hierarchical system processes viewer based on web technologies.
-
-️⚠️ Warning: application is not ready and currently being at alpha version.️
 
 ![Process Explorer](./process-explorer-demo.gif)
 
@@ -13,15 +11,24 @@ Hierarchical system processes viewer based on web technologies.
 * Effector
 * Ramda
 
-## Build
+## Install
 
-```bash
-npm i
-npm run build
+*macOS 10.10+ is supported (64-bit only).*
+
+**macOS**
+
+[**Download**](https://github.com/lessmess-dev/process-explorer/releases/latest) the `.dmg` file.
+
+
+---
+
+
+### Run
+
 ```
-
-#### Latest builds
-* [Mac](https://github.com/lessmess-dev/process-explorer/releases/download/v0.0.1/Process.Explorer-0.0.1-mac.zip)
+$ npm install
+$ npm start
+```
 
 ## Debug
 
