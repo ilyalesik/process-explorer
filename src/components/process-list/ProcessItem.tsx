@@ -4,6 +4,9 @@ import { useStoreMap } from "effector-react";
 import { $processListMap } from "../../processListStore";
 import { useChildrenProcessItems } from "./useChildrenProcessItems";
 import * as R from "ramda";
+import * as d3 from "d3";
+
+const percentageToColor = value => d3.interpolateSinebow(0.2 + value);
 
 const valueLens = (pid, field) => R.view(R.lensPath([pid, field]));
 
@@ -38,9 +41,8 @@ export const ProcessItem = (props: { pid: number }) => {
 							<div className="processItem__column">
 								<p class="processItem__label">cpu</p>
 								<p
-									className={`processItem__text ${
-										cpu < 50 ? "processItem__text--green" : "processItem__text--red"
-									}`}>
+									style={{ color: React.useMemo(() => percentageToColor(cpu), [cpu]) }}
+									className="processItem__text">
 									{toFixed2(cpu)}%
 								</p>
 							</div>
@@ -53,9 +55,8 @@ export const ProcessItem = (props: { pid: number }) => {
 							<div className="processItem__column">
 								<p class="processItem__label">memory</p>
 								<p
-									className={`processItem__text ${
-										memory < 50 ? "processItem__text--green" : "processItem__text--red"
-									}`}>
+									style={{ color: React.useMemo(() => percentageToColor(memory), [memory]) }}
+									className="processItem__text">
 									{toFixed2(memory)}%
 								</p>
 							</div>

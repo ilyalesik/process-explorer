@@ -6,7 +6,7 @@
     padding: 0 24px;
     width: 453px;
     border-radius: 12px;
-    background-color: rgba(216, 216, 216, 0.3);
+    background-color: rgba(72, 70, 70, 0.31);
 
 }
 
@@ -26,6 +26,7 @@
     margin: 0;
     padding: 0;
     font-size: 20px;
+    transition: color .2s ease-out;
 }
 
 .processItem__text--green {

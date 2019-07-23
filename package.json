@@ -30,6 +30,7 @@
 	],
 	"dependencies": {
 		"@types/ramda": "^0.26.18",
+		"d3": "^5.9.7",
 		"effector": "^20.0.0",
 		"effector-react": "^20.0.5",
 		"electron-context-menu": "^0.12.1",
