@@ -4,7 +4,7 @@
 
 Hierarchical system processes viewer based on web technologies. 
 
-<p align="center"><img src="process-explorer-demo.gif" width="532"></p>
+<p align="center"><img src="process-explorer-demo.gif" width="502"></p>
 
 ## Technologies
 * Electron
