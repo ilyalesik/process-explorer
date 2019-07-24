@@ -4,7 +4,7 @@
 
 Hierarchical system processes viewer based on web technologies. 
 
-<img src="process-explorer-demo.gif" width="100%">
+<p align="center"><img src="process-explorer-demo.gif" width="532"></p>
 
 ## Technologies
 * Electron
@@ -32,13 +32,8 @@ $ npm install
 $ npm start
 ```
 
-## Debug
-
-#### Launch React DevTools
-
-Then execute the following from the Console tab of your running Electron app's developer tools:
-
-```javascript
-require('electron-react-devtools').install()
-```
-
+## Sponsored
+<a href="https://lessmess.agency/?utm_source=process-explorer">
+  <img src="https://lessmess.agency/badges/sponsored_by_lessmess.svg"
+       alt="Sponsored by Lessmess" width="236" height="54">
+</a>
