@@ -1,8 +1,8 @@
 import React from "react";
 import { $parentMap } from "../../processListStore";
-import { useList } from "../../utils/useList";
 import { ProcessItem } from "./ProcessItem";
 import * as R from "ramda";
+import { useList } from "effector-react";
 
 const parentLens = pid =>
 	R.compose(
@@ -13,5 +13,5 @@ const parentLens = pid =>
 export const useChildrenProcessItems = pid => {
 	const store = React.useRef($parentMap.map(parentLens(pid)));
 
-	return useList(store.current, item => <ProcessItem pid={item} />);
+	return useList(store.current, (item: number) => <ProcessItem pid={item} />);
 };
