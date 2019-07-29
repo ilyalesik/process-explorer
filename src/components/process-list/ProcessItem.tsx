@@ -63,6 +63,9 @@ export const ProcessItem = (props: { pid: number }) => {
 						)
 					}
 				</FieldProvider>
+				<div className="processItem__closeContainer">
+					<button class="processItem__close" />
+				</div>
 			</div>
 			<div class="processItem__children">{childList}</div>
 		</>
