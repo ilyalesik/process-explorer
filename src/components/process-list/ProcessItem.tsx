@@ -1,7 +1,7 @@
 import React from "react";
 import "./processItem.css";
 import { useStoreMap } from "effector-react";
-import { $processListMap } from "../../processListStore";
+import { $processListMap, killProcessEvent } from "../../processListStore";
 import { useChildrenProcessItems } from "./useChildrenProcessItems";
 import * as R from "ramda";
 import * as d3 from "d3";
@@ -64,7 +64,7 @@ export const ProcessItem = (props: { pid: number }) => {
 					}
 				</FieldProvider>
 				<div className="processItem__closeContainer">
-					<button class="processItem__close" />
+					<button class="processItem__close" onClick={() => killProcessEvent(pid)} />
 				</div>
 			</div>
 			<div class="processItem__children">{childList}</div>

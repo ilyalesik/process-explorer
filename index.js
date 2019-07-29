@@ -9,6 +9,7 @@ const contextMenu = require('electron-context-menu');
 const {ipcMain} = require('electron');
 const isDev = require("electron-is-dev");
 const psList = require('ps-list');
+const fkill = require('fkill');
 
 unhandled();
 debug();
@@ -95,5 +96,15 @@ app.on('activate', async () => {
     ipcMain.on('request-tasklist-message', async (event) => {
         const processList = await psList();
         event.reply('request-tasklist-reply', processList)
+    });
+
+    ipcMain.on('kill-process', async (event, arg) => {
+        try {
+            await fkill(arg);
+            event.reply('kill-process-success');
+        } catch (e) {
+            event.reply('kill-process-error');
+        }
+
     });
 })();

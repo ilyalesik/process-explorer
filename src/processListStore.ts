@@ -26,3 +26,5 @@ const updateListParentMap = updateListEvent.map(
 	)
 );
 export const $parentMap = restore(updateListParentMap, {});
+
+export const killProcessEvent = createEvent<number>("killProcessEvent");

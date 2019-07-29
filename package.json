@@ -40,6 +40,7 @@
 		"electron-unhandled": "^2.2.0",
 		"electron-updater": "^4.0.6",
 		"electron-util": "^0.12.0",
+		"fkill": "^6.2.0",
 		"ps-list": "^6.3.0",
 		"ramda": "^0.26.1",
 		"react": "^16.8.6",
