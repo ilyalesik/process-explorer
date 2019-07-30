@@ -4,9 +4,7 @@ import { useStoreMap } from "effector-react";
 import { $processListMap, killProcessEvent } from "../../processListStore";
 import { useChildrenProcessItems } from "./useChildrenProcessItems";
 import * as R from "ramda";
-import * as d3 from "d3";
-
-const percentageToColor = value => d3.interpolateSinebow(0.2 + value);
+import { PercentageIndicator } from "./PercentageIndicator";
 
 const valueLens = (pid, field) => R.view(R.lensPath([pid, field]));
 
@@ -20,8 +18,6 @@ const FieldProvider = props => {
 
 	return <>{children(value)}</>;
 };
-
-const toFixed2 = num => Math.round(num * 100) / 100;
 
 export const ProcessItem = (props: { pid: number }) => {
 	const { pid } = props;
@@ -40,11 +36,7 @@ export const ProcessItem = (props: { pid: number }) => {
 						typeof cpu === "number" && (
 							<div className="processItem__column">
 								<p class="processItem__label">cpu</p>
-								<p
-									style={{ color: React.useMemo(() => percentageToColor(cpu), [cpu]) }}
-									className="processItem__text">
-									{toFixed2(cpu)}%
-								</p>
+								<PercentageIndicator value={cpu} className="processItem__text" />
 							</div>
 						)
 					}
@@ -54,11 +46,7 @@ export const ProcessItem = (props: { pid: number }) => {
 						typeof memory === "number" && (
 							<div className="processItem__column">
 								<p class="processItem__label">memory</p>
-								<p
-									style={{ color: React.useMemo(() => percentageToColor(memory), [memory]) }}
-									className="processItem__text">
-									{toFixed2(memory)}%
-								</p>
+								<PercentageIndicator value={memory} className="processItem__text" />
 							</div>
 						)
 					}
