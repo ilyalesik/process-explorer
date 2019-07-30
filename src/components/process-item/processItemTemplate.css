@@ -52,14 +52,7 @@
     padding: 24px 0 0 44px;
 }
 
-.processItem__close {
-    border: none;
-    padding: 0;
-    width: 16px;
-    height: 16px;
-    background: url(./close.svg) no-repeat;
-    background-size: cover;
-}
+
 
 .processItem__closeContainer {
     margin-left: 24px;

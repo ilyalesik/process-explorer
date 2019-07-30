@@ -1,0 +1,9 @@
+
+.closeButton {
+    border: none;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    background: url(./close.svg) no-repeat;
+    background-size: cover;
+}
