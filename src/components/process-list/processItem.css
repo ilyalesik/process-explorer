@@ -29,16 +29,8 @@
     transition: color .2s ease-out;
 }
 
-.processItem__text--green {
-    color: #25f041;
-}
-
 .processItem__text--white {
     color: white;
-}
-
-.processItem__text--red {
-    color: #f2481e;
 }
 
 .processItem__name {
