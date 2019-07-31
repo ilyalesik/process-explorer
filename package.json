@@ -23,14 +23,17 @@
 		"release": "np",
 		"typescript": "tsc -p tsconfig.json --noEmit",
 		"prettier": "prettier \"*/**/*.+(js|ts|tsx)\" --ignore-path ./.prettierignore --write && git add . && git status",
+		"test": "jest",
 		"tsc": "tcm src",
 		"tscw": "tcm src -w"
 	},
 	"pre-commit": [
+    "test",
 		"typescript",
 		"prettier"
 	],
 	"dependencies": {
+		"@babel/preset-typescript": "^7.3.3",
 		"@types/ramda": "^0.26.18",
 		"classcat": "^4.0.2",
 		"d3": "^5.9.7",
@@ -47,22 +50,27 @@
 		"ps-list": "^6.3.0",
 		"ramda": "^0.26.1",
 		"react": "^16.8.6",
-		"react-dom": "^16.8.6"
+		"react-dom": "^16.8.6",
+		"react-test-renderer": "^16.8.6"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.4",
 		"@babel/preset-env": "^7.5.4",
 		"@babel/preset-react": "^7.0.0",
+		"@types/jest": "^24.0.16",
 		"autoprefixer": "^9.6.1",
 		"concurrently": "^4.1.1",
 		"electron": "^5.0.4",
 		"electron-builder": "^20.38.4",
 		"electron-react-devtools": "^0.5.3",
+		"jest": "^24.8.0",
+		"jest-css-modules": "^2.1.0",
 		"np": "^5.0.3",
 		"parcel-bundler": "^1.12.3",
 		"postcss-modules": "^1.4.1",
 		"pre-commit": "^1.2.2",
 		"prettier": "^1.18.2",
+		"ts-jest": "^24.0.2",
 		"typed-css-modules": "^0.6.0",
 		"typescript": "^3.5.3",
 		"wait-on": "^3.3.0"
