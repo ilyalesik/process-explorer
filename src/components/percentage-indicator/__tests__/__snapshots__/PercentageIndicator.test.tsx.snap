@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PercentageIndicator /> PercentageIndicator renders correctly with value = 0 1`] = `
+<p
+  style={
+    Object {
+      "color": "rgb(167, 213, 3)",
+    }
+  }
+>
+  0
+  %
+</p>
+`;
+
+exports[`<PercentageIndicator /> PercentageIndicator renders correctly with value = 0.1 1`] = `
+<p
+  style={
+    Object {
+      "color": "rgb(88, 252, 42)",
+    }
+  }
+>
+  0.1
+  %
+</p>
+`;
+
+exports[`<PercentageIndicator /> PercentageIndicator renders correctly with value = 0.66666 1`] = `
+<p
+  style={
+    Object {
+      "color": "rgb(213, 3, 167)",
+    }
+  }
+>
+  0.67
+  %
+</p>
+`;
+
+exports[`<PercentageIndicator /> PercentageIndicator renders correctly with value = 100.1 1`] = `
+<p
+  style={
+    Object {
+      "color": "rgb(88, 252, 42)",
+    }
+  }
+>
+  100.1
+  %
+</p>
+`;

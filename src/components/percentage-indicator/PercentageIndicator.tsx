@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import * as d3 from "d3";
 
 const percentageToColor = value => d3.interpolateSinebow(0.2 + value);
