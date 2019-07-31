@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProcessList /> ProcessList renders correctly 1`] = `
+<div
+  class="container"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="column name"
+    >
+      <span
+        className="text text--white"
+      >
+        root
+      </span>
+    </div>
+    <div
+      className="column"
+    >
+      <p
+        class="label"
+      >
+        cpu
+      </p>
+      <p
+        className="text"
+        style={
+          Object {
+            "color": "rgb(167, 213, 3)",
+          }
+        }
+      >
+        0
+        %
+      </p>
+    </div>
+    <div
+      className="column"
+    >
+      <p
+        class="label"
+      >
+        memory
+      </p>
+      <p
+        className="text"
+        style={
+          Object {
+            "color": "rgb(88, 252, 42)",
+          }
+        }
+      >
+        0.1
+        %
+      </p>
+    </div>
+    <div
+      className="closeContainer"
+    >
+      <button
+        className="closeButton"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    class="children"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="column name"
+      >
+        <span
+          className="text text--white"
+        >
+          child1
+        </span>
+      </div>
+      <div
+        className="column"
+      >
+        <p
+          class="label"
+        >
+          cpu
+        </p>
+        <p
+          className="text"
+          style={
+            Object {
+              "color": "rgb(167, 213, 3)",
+            }
+          }
+        >
+          0
+          %
+        </p>
+      </div>
+      <div
+        className="column"
+      >
+        <p
+          class="label"
+        >
+          memory
+        </p>
+        <p
+          className="text"
+          style={
+            Object {
+              "color": "rgb(167, 213, 3)",
+            }
+          }
+        >
+          0
+          %
+        </p>
+      </div>
+      <div
+        className="closeContainer"
+      >
+        <button
+          className="closeButton"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+    <div
+      class="children"
+    />
+    <div
+      className="container"
+    >
+      <div
+        className="column name"
+      >
+        <span
+          className="text text--white"
+        >
+          child2
+        </span>
+      </div>
+      <div
+        className="column"
+      >
+        <p
+          class="label"
+        >
+          cpu
+        </p>
+        <p
+          className="text"
+          style={
+            Object {
+              "color": "rgb(59, 255, 68)",
+            }
+          }
+        >
+          2.14
+          %
+        </p>
+      </div>
+      <div
+        className="column"
+      >
+        <p
+          class="label"
+        >
+          memory
+        </p>
+        <p
+          className="text"
+          style={
+            Object {
+              "color": "rgb(0, 191, 191)",
+            }
+          }
+        >
+          2.3
+          %
+        </p>
+      </div>
+      <div
+        className="closeContainer"
+      >
+        <button
+          className="closeButton"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+    <div
+      class="children"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="column name"
+        >
+          <span
+            className="text text--white"
+          >
+            child3
+          </span>
+        </div>
+        <div
+          className="column"
+        >
+          <p
+            class="label"
+          >
+            cpu
+          </p>
+          <p
+            className="text"
+            style={
+              Object {
+                "color": "rgb(0, 191, 191)",
+              }
+            }
+          >
+            1.3
+            %
+          </p>
+        </div>
+        <div
+          className="column"
+        >
+          <p
+            class="label"
+          >
+            memory
+          </p>
+          <p
+            className="text"
+            style={
+              Object {
+                "color": "rgb(167, 213, 3)",
+              }
+            }
+          >
+            0
+            %
+          </p>
+        </div>
+        <div
+          className="closeContainer"
+        >
+          <button
+            className="closeButton"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+      <div
+        class="children"
+      />
+    </div>
+  </div>
+</div>
+`;

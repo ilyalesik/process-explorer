@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from "react";
 import * as s from "./processList.css";
-import cc from "classcat";
+const cc = require("classcat");
 import * as R from "ramda";
 import { $parentMap, killProcessEvent } from "../../processListStore";
 import { useList } from "effector-react";
