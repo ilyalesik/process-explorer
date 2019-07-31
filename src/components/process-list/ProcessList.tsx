@@ -8,14 +8,8 @@ import { ProcessItemTemplate } from "../process-item/ProcessItemTemplate";
 import { CloseButton } from "../close-button/CloseButton";
 import { FieldProvider } from "./FieldProvider";
 
-const parentLens = pid =>
-	R.compose(
-		R.defaultTo([]),
-		R.view(R.lensPath([pid]))
-	);
-
 export const useChildrenProcessItems = pid => {
-	const store = React.useRef($parentMap.map(parentLens(pid)));
+	const store = React.useRef($parentMap.map(R.propOr([], pid)));
 
 	return useList(store.current, (item: number) => <ProcessItem pid={item} />);
 };
