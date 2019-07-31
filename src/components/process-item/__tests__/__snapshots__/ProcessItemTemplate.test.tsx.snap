@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProcessItemTemplate /> ProcessItemTemplate renders correctly 1`] = `
+Array [
+  <div
+    className="container"
+  >
+    <div
+      className="column name"
+    >
+      name
+    </div>
+    <div
+      className="column"
+    >
+      <p
+        class="label"
+      >
+        cpu
+      </p>
+      cpu
+    </div>
+    <div
+      className="column"
+    >
+      <p
+        class="label"
+      >
+        memory
+      </p>
+      memory
+    </div>
+    <div
+      className="closeContainer"
+    >
+      close
+    </div>
+  </div>,
+  <div
+    class="children"
+  >
+    children
+  </div>,
+]
+`;
