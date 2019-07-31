@@ -20,20 +20,20 @@ export const ProcessItem = (props: { pid: number }) => {
 
 	const name = (
 		<FieldProvider pid={pid} field="name">
-			{name => <span className="processItem__text processItem__text--white">{name}</span>}
+			{name => <span className="processList__text processList__text--white">{name}</span>}
 		</FieldProvider>
 	);
 
 	const cpu = (
 		<FieldProvider pid={pid} field="cpu">
-			{cpu => typeof cpu === "number" && <PercentageIndicator value={cpu} className="processItem__text" />}
+			{cpu => typeof cpu === "number" && <PercentageIndicator value={cpu} className="processList__text" />}
 		</FieldProvider>
 	);
 
 	const memory = (
 		<FieldProvider pid={pid} field="memory">
 			{memory =>
-				typeof memory === "number" && <PercentageIndicator value={memory} className="processItem__text" />
+				typeof memory === "number" && <PercentageIndicator value={memory} className="processList__text" />
 			}
 		</FieldProvider>
 	);
