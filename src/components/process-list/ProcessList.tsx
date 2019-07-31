@@ -1,5 +1,6 @@
 import React from "react";
-import "./processList.css";
+import * as s from "./processList.css";
+import cc from "classcat";
 import * as R from "ramda";
 import { $parentMap, killProcessEvent } from "../../processListStore";
 import { useList } from "effector-react";
@@ -20,21 +21,19 @@ export const ProcessItem = (props: { pid: number }) => {
 
 	const name = (
 		<FieldProvider pid={pid} field="name">
-			{name => <span className="processList__text processList__text--white">{name}</span>}
+			{name => <span className={cc([s.text, s["text--white"]])}>{name}</span>}
 		</FieldProvider>
 	);
 
 	const cpu = (
 		<FieldProvider pid={pid} field="cpu">
-			{cpu => typeof cpu === "number" && <PercentageIndicator value={cpu} className="processList__text" />}
+			{cpu => typeof cpu === "number" && <PercentageIndicator value={cpu} className={s.text} />}
 		</FieldProvider>
 	);
 
 	const memory = (
 		<FieldProvider pid={pid} field="memory">
-			{memory =>
-				typeof memory === "number" && <PercentageIndicator value={memory} className="processList__text" />
-			}
+			{memory => typeof memory === "number" && <PercentageIndicator value={memory} className={s.text} />}
 		</FieldProvider>
 	);
 
@@ -50,5 +49,5 @@ export const ProcessItem = (props: { pid: number }) => {
 export const ProcessList = () => {
 	const childList = useChildrenProcessItems(0);
 
-	return <div class="processList">{childList}</div>;
+	return <div class={s.container}>{childList}</div>;
 };

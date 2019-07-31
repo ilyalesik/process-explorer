@@ -1,5 +1,5 @@
 
-.processItemTemplate {
+.container {
     display: flex;
     height: 75px;
     align-items: center;
@@ -9,25 +9,25 @@
     background-color: rgba(72, 70, 70, 0.31);
 }
 
-.processItemTemplate + .processItemTemplate {
+.container + .container {
     margin-top: 24px;
 }
 
-.processItemTemplate__column {
+.column {
     width: 56px;
 }
 
-.processItemTemplate__column + .processItemTemplate__column {
+.column + .column {
     margin-left: 24px;
 }
 
-.processItemTemplate__name {
+.name {
     flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.processItemTemplate__label {
+.label {
     margin: 0;
     padding: 0;
     font-size: 12px;
@@ -36,10 +36,10 @@
     text-transform: uppercase;
 }
 
-.processItemTemplate__children {
+.children {
     padding: 24px 0 0 44px;
 }
 
-.processItemTemplate__closeContainer {
+.closeContainer {
     margin-left: 24px;
 }

@@ -1,4 +1,4 @@
-.processList {
+.container {
     height: 100vh;
     overflow-y: scroll;
 
@@ -6,13 +6,13 @@
     background: #232222;
 }
 
-.processList__text {
+.text {
     margin: 0;
     padding: 0;
     font-size: 20px;
     transition: color .2s ease-out;
 }
 
-.processList__text--white {
+.text--white {
     color: white;
 }

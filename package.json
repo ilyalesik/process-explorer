@@ -22,7 +22,9 @@
 		"build": "npm run clean-build && npm run copy-static && npm run react-build && npm run dist",
 		"release": "np",
 		"typescript": "tsc -p tsconfig.json --noEmit",
-		"prettier": "prettier \"*/**/*.+(js|ts|tsx)\" --ignore-path ./.prettierignore --write && git add . && git status"
+		"prettier": "prettier \"*/**/*.+(js|ts|tsx)\" --ignore-path ./.prettierignore --write && git add . && git status",
+		"tsc": "tcm src",
+		"tscw": "tcm src -w"
 	},
 	"pre-commit": [
 		"typescript",
@@ -30,6 +32,7 @@
 	],
 	"dependencies": {
 		"@types/ramda": "^0.26.18",
+		"classcat": "^4.0.2",
 		"d3": "^5.9.7",
 		"effector": "^20.0.0",
 		"effector-react": "^20.1.1",
@@ -50,14 +53,17 @@
 		"@babel/core": "^7.5.4",
 		"@babel/preset-env": "^7.5.4",
 		"@babel/preset-react": "^7.0.0",
+		"autoprefixer": "^9.6.1",
 		"concurrently": "^4.1.1",
 		"electron": "^5.0.4",
 		"electron-builder": "^20.38.4",
 		"electron-react-devtools": "^0.5.3",
 		"np": "^5.0.3",
 		"parcel-bundler": "^1.12.3",
+		"postcss-modules": "^1.4.1",
 		"pre-commit": "^1.2.2",
 		"prettier": "^1.18.2",
+		"typed-css-modules": "^0.6.0",
 		"typescript": "^3.5.3",
 		"wait-on": "^3.3.0"
 	},
