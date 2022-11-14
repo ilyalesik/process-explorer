@@ -36,7 +36,7 @@
 		"@babel/preset-typescript": "^7.3.3",
 		"@types/ramda": "^0.26.18",
 		"classcat": "^4.0.2",
-		"d3": "^5.9.7",
+		"d3": "^7.6.1",
 		"effector": "^20.0.0",
 		"effector-react": "^20.1.1",
 		"electron-context-menu": "^0.12.1",
