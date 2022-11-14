@@ -61,7 +61,7 @@
 		"autoprefixer": "^9.6.1",
 		"concurrently": "^4.1.1",
 		"electron": "^18.3.7",
-		"electron-builder": "^20.38.4",
+		"electron-builder": "^23.6.0",
 		"electron-react-devtools": "^0.5.3",
 		"jest": "^24.8.0",
 		"jest-css-modules": "^2.1.0",
